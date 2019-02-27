@@ -8,6 +8,12 @@
 </head>
 <body>
 <%
+	response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");// for HTTP 1.1
+	 
+	response.setHeader("Pragma", "no-cache"); // for HTTP 1.0
+	
+	response.setHeader("Expires", "0"); // for proxy servers
+	
 	if(session.getAttribute("username")==null)
 	{
 		response.sendRedirect("login.jsp");

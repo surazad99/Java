@@ -7,15 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-${message}
-	<form action="Login" method ="post">
+	<form action="SignUp" method ="post">
 		Enter your username : <input type ="text" name ="username"><br>
 		Enter your password : <input type = "password" name="password"><br>
-		<input type ="submit" value ="Login">
-		<a href ="signup.jsp"><input type ="button" value ="Sign Up"></a>
+		<input type ="submit" value ="Create Account">
 	</form>
-	
-	
-	
 </body>
 </html>

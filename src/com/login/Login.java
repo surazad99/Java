@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.login.dao.LoginDao;
+
 /**
  * Servlet implementation class Login
  */
@@ -18,8 +20,8 @@ public class Login extends HttpServlet {
 		
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-		
-		if(username.equals("suraj") && password.equals("1234"))
+		LoginDao log = new LoginDao();
+		if(log.check(username, password))
 		{
 			HttpSession session = request.getSession();
 			session.setAttribute("username", username); 
